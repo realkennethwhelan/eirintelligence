@@ -1,6 +1,8 @@
 baseurl: '/'
 permalink: pretty
-title: 'Jekyll Serif'
+title: 'Eirintelligence Global'
+description: 'Innovative cleaning robots and solutions'
+url: 'https://eirintelligence.com'  # used for SEO and social media sharing 
 
 logo:
   mobile: "images/logo/logo-mobile.svg"
