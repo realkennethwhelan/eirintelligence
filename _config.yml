@@ -1,4 +1,5 @@
 baseurl: '/'
+email: kennethwhelan@eirintelligence.com
 permalink: pretty
 title: 'Eirintelligence Global'
 description: 'Innovative cleaning robots and solutions'
@@ -23,6 +24,11 @@ collections:
     output: true
 
 defaults:
+  - scope:
+      path: ""
+      type: "products"
+    values:
+      layout: "product"
   - scope:
       path: ""
       type: "services"
