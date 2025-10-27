@@ -2,9 +2,9 @@
 ---
 
 // Colors
-$primary: #e5261f;
-$primary-dark: #a01b16;
-$secondary: #f88379;
+$primary: #18c357;
+$primary-dark: #06920d;
+$secondary: #5391e2;
 $black: #2f2f41;
 $white: #ffffff;
 $white-offset: #fff6f8;
@@ -19,6 +19,14 @@ $link-hover-decoration: underline;
 // Fonts
 $font-family-base: Helvetica, Arial, sans-serif, -apple-system;
 $font-family-heading: "Playfair Display", serif, -apple-system;
+
+body {
+  font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
 
 // Footer
 $footer-background-color: $primary;
