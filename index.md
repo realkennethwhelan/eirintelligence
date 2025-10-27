@@ -8,6 +8,4 @@ intro_image_hide_on_mobile: true
 show_call_box: true
 ---
 
-# Serif - A Jekyll Business Theme.
-
-Welcome to Eirintelligence Global.
+# Welcome to Eirintelligence Global

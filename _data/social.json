@@ -1,12 +1,7 @@
 [
   {
-    "name": "TikTok",
-    "link": "https://tiktok.com/@eirintelligence",
-    "image": "images/social/tiktok.png"
-  },
-  {
     "name": "Twitter",
     "link": "https://twitter.com/eirintelligence",
-    "image": "images/social/twitter.png"
+    "image": "images/social/twitter.svg"
   }
 ]
