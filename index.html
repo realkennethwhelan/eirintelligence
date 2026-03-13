@@ -370,6 +370,19 @@
     }
     .btn-dark:hover { background: var(--green); color: var(--dark); }
 
+    .btn-lucky {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: linear-gradient(135deg, #6772e5 0%, #9b59b6 100%);
+      color: #fff; border: none; cursor: pointer;
+      font-size: 14px; font-weight: 700;
+      padding: 11px 22px; border-radius: 4px;
+      transition: opacity 0.2s, transform 0.1s;
+      white-space: nowrap;
+    }
+    .btn-lucky:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn-lucky:active { transform: translateY(0); }
+    .btn-lucky:disabled { opacity: 0.5; cursor: not-allowed; }
+
     /* ─────────────────────────────────────────
        HOW IT WORKS
     ───────────────────────────────────────── */
@@ -709,6 +722,9 @@
             <a href="https://shop.eirintelligence.com/products/eirintelligence-robotic-pool-skimmer" class="btn-dark">
               Shop Now →
             </a>
+            <button class="btn-lucky" id="btn-lucky-skimmer" onclick="handleLuckyBuy()">
+              🎲 I'm Feeling Lucky
+            </button>
           </div>
         </div>
       </div>
@@ -967,6 +983,22 @@
     });
   }, { threshold: 0.12 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // ── I'm Feeling Lucky — Stripe direct checkout ──────────────────────────
+  // REPLACE the value below with your Stripe Payment Link URL
+  // e.g. "https://buy.stripe.com/xxxxxxxxxxxx"
+  const STRIPE_POOL_SKIMMER_PAYMENT_LINK = 'https://buy.stripe.com/fZucMXfWLad21OP1sd2VG01';
+
+  function handleLuckyBuy() {
+    const btn = document.getElementById('btn-lucky-skimmer');
+    if (!STRIPE_POOL_SKIMMER_PAYMENT_LINK) {
+      alert('Stripe checkout coming soon!');
+      return;
+    }
+    btn.disabled = true;
+    btn.textContent = 'Loading…';
+    window.location.href = STRIPE_POOL_SKIMMER_PAYMENT_LINK;
+  }
 </script>
 </body>
 </html>
